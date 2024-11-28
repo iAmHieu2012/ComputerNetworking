@@ -15,6 +15,7 @@ You need to have these features:
 Step 1: Clone vcpkg repository:
 
 ```git clone https://github.com/microsoft/vcpkg.git```
+
 Step 2: Run the boostrap: 
 
 ```cd vcpkg; .\bootstrap-vcpkg.bat```
