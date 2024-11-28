@@ -516,6 +516,18 @@ std::string loadFile(const std::string& file_path) {
 
 	return std::string(buffer.begin(), buffer.end());
 }
+std::wstring FileName(const std::wstring& str)
+{
+	size_t found = str.find_last_of(L"/\\");
+	std::wstring path = str.substr(found + 1); // check that is OK
+	return path;
+}
+std::string FileName(const std::string& str)
+{
+	size_t found = str.find_last_of("/\\");
+	std::string path = str.substr(found + 1); // check that is OK
+	return path;
+}
 // Function to send email via Gmail API with attachment
 bool sendEmailWithAttachment(
 	const std::string& access_token,

@@ -2,6 +2,7 @@
 # project specific logic here.
 #
 include_directories(include)
+set(CMAKE_BUILD_TYPE Release)
 file(GLOB SOURCES "src/*.cpp")
 
 

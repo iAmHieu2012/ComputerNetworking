@@ -42,3 +42,14 @@ bool checkExistAccessTokenFile(const std::string& name);
 void getCredentials(std::string credFilePath, std::string& client_id, std::string& client_secret, std::string& auth_uri);
 std::vector<std::vector<std::string>> getUnreadMessageContents(const std::string& access_token);
 void readToken(const std::string token_file, std::string& access_token, std::string& refresh_token);
+bool sendEmailWithAttachment(
+	const std::string& access_token,
+	const std::string& sender_email,
+	const std::string& recipient_email,
+	const std::string& subject,
+	const std::string& body,
+	const std::string& file_path,
+	const std::string& file_name
+);
+std::wstring FileName(const std::wstring&);
+std::string FileName(const std::string&);
